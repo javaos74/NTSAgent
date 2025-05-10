@@ -1,0 +1,12 @@
+[project]
+name = "NTSAgent"
+version = "0.0.1"
+description = "사업자등록번호로 사업자 등록 상태를 체크하는 에이전트"
+authors = [{ name = "Charles Kim", email = "hyungsoo.kim@uipath.com" }]
+dependencies = [
+    "uipath-langchain>=0.0.106",
+    "langchain-anthropic>=0.3.8",
+    "requests>=2.32.3",
+    "load-dotenv>=0.1.0",
+]
+requires-python = ">=3.10"

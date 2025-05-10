@@ -1,0 +1,37 @@
+{
+  "entryPoints": [
+    {
+      "filePath": "agent",
+      "uniqueId": "b9026f87-9148-4a02-b0bb-b32420e7786a",
+      "type": "agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "biz_reg_no": {
+            "title": "Biz Reg No",
+            "type": "string"
+          }
+        },
+        "required": [
+          "biz_reg_no"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      }
+    }
+  ],
+  "bindings": {
+    "version": "2.0",
+    "resources": []
+  }
+}
