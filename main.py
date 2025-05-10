@@ -9,7 +9,6 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import START, StateGraph, END
 from pydantic import BaseModel
 from dotenv import find_dotenv, load_dotenv
-import os, requests
 from nts_tools import nts_check_business_status_tool
 
 
@@ -24,12 +23,12 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-llm = UiPathAzureChatOpenAI(
-#llm = ChatOpenAI(
+#llm = UiPathAzureChatOpenAI(
+llm = ChatOpenAI(
     model="gpt-4o-2024-08-06",
     temperature=0,
     max_tokens=100,
-    timeout=5,
+    timeout=30,
     max_retries=2)
 
 tools = [nts_check_business_status_tool]
