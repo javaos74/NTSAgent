@@ -38,13 +38,13 @@ agent_executor = AgentExecutor(agent=nts_agent, tools=tools, verbose=True)
 
 
 class GraphInput(BaseModel):
-    biz_reg_no: str
+    query: str
 
 class GraphOutput(BaseModel):
     status: str
 
 async def check_status(state: GraphInput) -> GraphOutput:
-    output = agent_executor.invoke( {"input": state.biz_reg_no})
+    output = agent_executor.invoke( {"input": state.query})
     print(output)
     return GraphOutput(status=output["output"])
 

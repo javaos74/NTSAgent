@@ -6,11 +6,16 @@ import os, requests
 def nts_check_business_status_tool( reg_no: str) -> str:
     """
     입력한 사업자등록번호의 상태를 확인합니다.
+
+    Args:
+        reg_no (str): 사업자등록번호
+    Returns:
+        str: 사업자등록번호의 상태 메세지를 반환합니다.
     """
     body = {
             "b_no": [reg_no.replace("-", "")]
         }
-    url = f"https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey={os.getenv("serviceKey")}"
+    url = f"https://api.odcloud.kr/api/nts-businessman/v1/status?serviceKey={os.getenv("NTS_API_KEY")}"
     resp = requests.post(url, json=body)
     if resp.status_code == 200:
         data = resp.json()
