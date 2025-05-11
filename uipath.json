@@ -2,18 +2,18 @@
   "entryPoints": [
     {
       "filePath": "agent",
-      "uniqueId": "c28b7f54-edd8-4f9c-98af-ea0d366356e3",
+      "uniqueId": "a6e9e8cc-e936-4797-99dc-ff744b2cdef4",
       "type": "agent",
       "input": {
         "type": "object",
         "properties": {
-          "biz_reg_no": {
-            "title": "Biz Reg No",
+          "query": {
+            "title": "Query",
             "type": "string"
           }
         },
         "required": [
-          "biz_reg_no"
+          "query"
         ]
       },
       "output": {

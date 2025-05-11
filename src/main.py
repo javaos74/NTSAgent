@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import START, StateGraph, END
 from pydantic import BaseModel
 from dotenv import find_dotenv, load_dotenv
-from nts_tools import nts_check_business_status_tool
+from src.nts_tools import nts_check_business_status_tool
 
 
 load_dotenv(find_dotenv())
