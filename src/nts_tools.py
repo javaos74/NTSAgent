@@ -33,7 +33,14 @@ def nts_check_business_status_tool( reg_no: str) -> str:
     else:
         return f"오류가 발생했으며 오류 코드 값은 {resp.status_code}입니다."
 
-    
+
+def print_env_vars():
+    """
+    Print all environment variables.
+    """
+    for key, value in os.environ.items():
+        print(f"{key} => {value}")
+   
 if __name__ == "__main__":
     load_dotenv(find_dotenv())
     result = nts_check_business_status_tool("142-87-00979")

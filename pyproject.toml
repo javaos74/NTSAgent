@@ -1,6 +1,6 @@
 [project]
 name = "NTSAgent"
-version = "0.0.12"
+version = "0.0.19"
 description = "사업자등록번호로 사업자 등록 상태를 체크하는 에이전트"
 authors = [{ name = "Charles Kim", email = "hyungsoo.kim@uipath.com" }]
 dependencies = [
